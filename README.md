@@ -18,7 +18,7 @@ Steps to buuild a chatbot (eribot)
     ~ create a POST function that streams text 
     ~ follow cookbook boilerplate
 
-[] declare the types 
+[X] declare the types 
 
 
 
