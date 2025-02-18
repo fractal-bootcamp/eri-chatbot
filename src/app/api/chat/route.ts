@@ -18,7 +18,11 @@ export async function POST(req: Request) {
         model: openai('gpt-4o'),
         system: 'You are a helpful assistant.',
         messages,
+        onError: ({ error }) => {
+            console.error(error);
+        },
         async onFinish({ response }) {
+            console.log('onFinish');
             await saveChat({
                 id: id,
                 messages: appendResponseMessages({
@@ -28,6 +32,8 @@ export async function POST(req: Request) {
             });
         },
     });
+
+    // console.log('result', result);
 
     return result.toDataStreamResponse({
         getErrorMessage: error => {
