@@ -1,40 +1,10 @@
 import Link from "next/link";
 
-import { LatestPost } from "~/app/_components/post";
-import { api, HydrateClient } from "~/trpc/server";
-
-import { useChat } from '@ai-sdk/react';
-
-
-
-// homepage for chatbot
 
 export default function Page() {
-  const { messages, input, handleInputChange, handleSubmit, status, stop } =
-    useChat({});
-
-  return (
-    <>
-      {messages.map(message => (
-        <div key={message.id}>
-          {message.role === 'user' ? 'User: ' : 'AI: '}
-          {message.content}
-        </div>
-      ))}
-
-      {(status === 'submitted' || status === 'streaming') && (
+    return (
         <div>
-          {status === 'submitted' & 7 < Spinner />}
-          <button type="button" onClick={() => stop()}>
-            Stop
-          </button>
+            <h1>EriBot's Chat App. <div>Please go to <Link href="/chat" className="text-blue-500">chat</Link> to start a new chat.</div></h1>
         </div>
-      )}
-
-      <form onSubmit={handleSubmit}>
-        <input name="promt" value={input} onChange={handleInputChange} />
-        <button type="submit">Submit</button>
-      </form>
-    </>
-  );
+    )
 }
