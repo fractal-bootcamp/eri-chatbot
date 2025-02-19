@@ -1,0 +1,25 @@
+[
+  {
+    "role": "user",
+    "content": "meow",
+    "parts": [
+      {
+        "type": "text",
+        "text": "meow"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "id": "msg-koAqcsPMcwQMTrBQUbeOhPFp",
+    "createdAt": "2025-02-19T18:10:41.990Z",
+    "content": "(=^･ω･^=) \nA cat's gentle purr,  \nIn the night, a soft whisper,  \nMystery unfurls. ✨\n\nWhat has whiskers, paws,  \nAnd a tail that sways with grace?  \nA riddle for you! 🐾\n\n(=^･ｪ･^=)ﾉ彡☆",
+    "toolInvocations": [],
+    "parts": [
+      {
+        "type": "text",
+        "text": "(=^･ω･^=) \nA cat's gentle purr,  \nIn the night, a soft whisper,  \nMystery unfurls. ✨\n\nWhat has whiskers, paws,  \nAnd a tail that sways with grace?  \nA riddle for you! 🐾\n\n(=^･ｪ･^=)ﾉ彡☆"
+      }
+    ]
+  }
+]

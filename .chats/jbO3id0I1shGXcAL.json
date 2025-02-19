@@ -1,0 +1,47 @@
+[
+  {
+    "role": "user",
+    "content": "what is the weather in los angelos",
+    "parts": [
+      {
+        "type": "text",
+        "text": "what is the weather in los angelos"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": "☁️✨ 𝓣𝓱𝓮 𝔀𝓮𝓪𝓽𝓱𝓮𝓻 𝓲𝓷 𝓛𝓸𝓼 𝓐𝓷𝓰𝓮𝓵𝓸𝓼 𝓲𝓼 𝓬𝓵𝓸𝓾𝓭𝔂! ✨☁️\n\n```\n   .--.\n  (    )\n (_)  (_)\n   '--'\n```\n\n🌥️ 𝓢𝓸 𝓶𝓪𝓷𝔂 𝓬𝓵𝓸𝓾𝓭𝓼 𝓪𝓻𝓮 𝓭𝓪𝓷𝓬𝓲𝓷𝓰 𝓲𝓷 𝓽𝓱𝓮 𝓼𝓴𝔂! 🌥️",
+    "toolInvocations": [
+      {
+        "state": "result",
+        "step": 0,
+        "toolCallId": "call_3bGLKh8yzpa4EuK8YLCKSPpA",
+        "toolName": "getWeatherInformation",
+        "args": {
+          "city": "Los Angeles"
+        },
+        "result": "cloudy"
+      }
+    ],
+    "parts": [
+      {
+        "type": "tool-invocation",
+        "toolInvocation": {
+          "state": "result",
+          "step": 0,
+          "toolCallId": "call_3bGLKh8yzpa4EuK8YLCKSPpA",
+          "toolName": "getWeatherInformation",
+          "args": {
+            "city": "Los Angeles"
+          },
+          "result": "cloudy"
+        }
+      },
+      {
+        "type": "text",
+        "text": "☁️✨ 𝓣𝓱𝓮 𝔀𝓮𝓪𝓽𝓱𝓮𝓻 𝓲𝓷 𝓛𝓸𝓼 𝓐𝓷𝓰𝓮𝓵𝓸𝓼 𝓲𝓼 𝓬𝓵𝓸𝓾𝓭𝔂! ✨☁️\n\n```\n   .--.\n  (    )\n (_)  (_)\n   '--'\n```\n\n🌥️ 𝓢𝓸 𝓶𝓪𝓷𝔂 𝓬𝓵𝓸𝓾𝓭𝓼 𝓪𝓻𝓮 𝓭𝓪𝓷𝓬𝓲𝓷𝓰 𝓲𝓷 𝓽𝓱𝓮 𝓼𝓴𝔂! 🌥️"
+      }
+    ]
+  }
+]
