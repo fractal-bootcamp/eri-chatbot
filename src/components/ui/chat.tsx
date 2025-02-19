@@ -10,15 +10,17 @@ import { type Message } from "~/components/ui/chat-message"
 import { CopyButton } from "~/components/ui/copy-button"
 import { MessageInput } from "~/components/ui/message-input"
 import { MessageList } from "~/components/ui/message-list"
-import { PromptSuggestions } from "~/components/ui/prompt-suggestions"
+import { MyAddToolResult } from "~/ui/chat"
 
 interface ChatPropsBase {
+  addToolResult: MyAddToolResult
   handleSubmit: (
     event?: { preventDefault?: () => void },
     options?: { experimental_attachments?: FileList }
   ) => void
   messages: Array<Message>
   input: string
+  placeholder: string
   className?: string
   handleInputChange: React.ChangeEventHandler<HTMLTextAreaElement>
   isGenerating: boolean
@@ -43,19 +45,24 @@ type ChatProps = ChatPropsWithoutSuggestions | ChatPropsWithSuggestions
 
 export function Chat({
   messages,
+  addToolResult,
   handleSubmit,
   input,
   handleInputChange,
   stop,
+  placeholder,
   isGenerating,
   append,
   suggestions,
   className,
   onRateResponse,
 }: ChatProps) {
+
+
   const lastMessage = messages.at(-1)
   const isEmpty = messages.length === 0
   const isTyping = lastMessage?.role === "user"
+
 
   const messageOptions = useCallback(
     (message: Message) => ({
@@ -96,13 +103,7 @@ export function Chat({
 
   return (
     <ChatContainer className={className}>
-      {isEmpty && append && suggestions ? (
-        <PromptSuggestions
-          label="Try these prompts ✨"
-          append={append}
-          suggestions={suggestions}
-        />
-      ) : null}
+
 
       {messages.length > 0 ? (
         <ChatMessages messages={messages}>
@@ -110,6 +111,7 @@ export function Chat({
             messages={messages}
             isTyping={isTyping}
             messageOptions={messageOptions}
+            addToolResult={addToolResult}
           />
         </ChatMessages>
       ) : null}
@@ -121,6 +123,7 @@ export function Chat({
       >
         {({ files, setFiles }) => (
           <MessageInput
+            placeholder={placeholder}
             value={input}
             onChange={handleInputChange}
             allowAttachments

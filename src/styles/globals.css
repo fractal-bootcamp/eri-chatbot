@@ -7,7 +7,7 @@
 
 @layer base {
   :root {
-    --background: 104 10% 23%;
+    --background: hsl(0, 0%, 0%);
     --foreground: 104 76.2% 70%;
     /* text */
     --card: 107 17% 73%;
@@ -18,9 +18,9 @@
     --primary-foreground: 104 76.2% 70%;
     --secondary: 260 76.2% 81%;
     --secondary-foreground: 240 5.9% 100%;
-    --muted: 240 3.8% 40.1%;
+    --muted: hsl(0, 0%, 32%);
     /* response bubble bg */
-    --muted-foreground: 240 3.8% 46.1%;
+    --muted-foreground: hsl(104, 30.2%, 60%);
     --accent: 104 76.2% 77% / 0.24;
     /* button hover */
     --accent-foreground: 107 17% 73%;
@@ -35,6 +35,22 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --sidebar-background: hsl(104, 10%, 20%);
+    /* Slightly darker than main background */
+    --sidebar-foreground: hsl(104, 76.2%, 60%);
+    /* Adjusted text color for contrast */
+    --sidebar-primary: hsl(104, 76.2%, 10%);
+    /* Darker primary for sidebar */
+    --sidebar-primary-foreground: hsl(104, 76.2%, 75%);
+    /* Lighter text on sidebar primary */
+    --sidebar-accent: hsl(104, 10%, 25%);
+    /* Slightly lighter highlight */
+    --sidebar-accent-foreground: hsl(104, 76.2%, 65%);
+    /* Adjusted highlight text */
+    --sidebar-border: hsl(104, 10%, 28%);
+    /* Slightly darker border */
+    --sidebar-ring: hsl(104, 76.2%, 15%);
+    /* Darker ring color */
 
   }
 
@@ -59,7 +75,7 @@
 
     /* Muted backgrounds become even darker; their text a bit brighter */
     --muted: 240 3.8% 30%;
-    --muted-foreground: 240 3.8% 60%;
+    --muted-foreground: hsl(104, 76.2%, 60%);
 
     /* A slightly subdued accent color */
     --accent: 104 76.2% 40% / 0.24;
@@ -83,14 +99,17 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
 }
-
-
-
-
-
 
 
 
@@ -107,15 +126,44 @@
 
 
 
+/* globals.css or component-specific CSS */
+.sidebar {
+  width: 11rem;
+  /* Default width */
+  transition: width 4s ease;
+  /* Smooth transition */
+}
 
-
-
-@layer base {
-  * {
-    @apply border-border;
+@media (max-width: 768px) {
+  .sidebar {
+    width: 10rem;
+    /* Smaller width for smaller screens */
   }
+}
 
-  body {
-    @apply bg-background text-foreground;
-  }
+
+.breadcrumb-container {
+  /* Or whatever class your breadcrumb has */
+  position: fixed;
+  top: 0;
+  /* Stick to the top */
+  left: 0;
+  /* Full width (adjust as needed) */
+  width: 100%;
+  /* Or a specific width */
+  background-color: #275e1e41;
+  /* Or your desired background color */
+  padding: 1rem;
+  /* Add some padding */
+  z-index: 10;
+  /* Ensure it's above other content */
+  /* Add any other styling you want (e.g., box-shadow, border) */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Optional shadow */
+}
+
+
+main {
+  padding-top: 4rem;
+  /* Adjust this value to match breadcrumb height + padding */
 }

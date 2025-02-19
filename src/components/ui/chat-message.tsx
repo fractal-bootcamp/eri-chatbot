@@ -7,6 +7,11 @@ import { Code2, Loader2, Terminal } from "lucide-react"
 import { cn } from "~/lib/utils"
 import { FilePreview } from "~/components/ui/file-preview"
 import { MarkdownRenderer } from "~/components/ui/markdown-renderer"
+import { UIMessage } from "ai"
+import { useChat } from "@ai-sdk/react"
+import { ToolInvocationUIPart } from "@ai-sdk/ui-utils"
+import { MyAddToolResult } from "~/ui/chat"
+import { MessagePart } from "~/ui/chat-message"
 
 const chatBubbleVariants = cva(
   "group/message relative break-words rounded-lg p-3 text-sm sm:max-w-[70%]",
@@ -81,6 +86,7 @@ export interface Message {
   createdAt?: Date
   experimental_attachments?: Attachment[]
   toolInvocations?: ToolInvocation[]
+  parts: UIMessage["parts"]
 }
 
 export interface ChatMessageProps extends Message {
@@ -88,19 +94,22 @@ export interface ChatMessageProps extends Message {
   animation?: Animation
   actions?: React.ReactNode
   className?: string
+  addToolResult: MyAddToolResult
 }
 
+
 export const ChatMessage: React.FC<ChatMessageProps> = ({
+  parts,
   role,
-  content,
   createdAt,
   showTimeStamp = false,
   animation = "scale",
   actions,
   className,
   experimental_attachments,
-  toolInvocations,
+  addToolResult,
 }) => {
+
   const files = useMemo(() => {
     return experimental_attachments?.map((attachment) => {
       const dataArray = dataUrlToUint8Array(attachment.url)
@@ -108,10 +117,6 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
       return file
     })
   }, [experimental_attachments])
-
-  if (toolInvocations && toolInvocations.length > 0) {
-    return <ToolCall toolInvocations={toolInvocations} />
-  }
 
   const isUser = role === "user"
 
@@ -132,7 +137,10 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 
       <div className={cn(chatBubbleVariants({ isUser, animation }), className)}>
         <div>
-          <MarkdownRenderer>{content}</MarkdownRenderer>
+          {parts.map((part) => {
+            const key = part.type === 'tool-invocation' ? part.toolInvocation.toolCallId : null;
+            return <MessagePart key={key} part={part} addToolResult={addToolResult} />
+          })}
         </div>
 
         {role === "assistant" && actions ? (
@@ -159,48 +167,23 @@ export const ChatMessage: React.FC<ChatMessageProps> = ({
 
 function dataUrlToUint8Array(data: string) {
   const base64 = data.split(",")[1]
+  if (!base64) {
+    throw new Error("Invalid data URL")
+  }
   const buf = Buffer.from(base64, "base64")
   return new Uint8Array(buf)
 }
 
-function ToolCall({
-  toolInvocations,
-}: Pick<ChatMessageProps, "toolInvocations">) {
-  if (!toolInvocations?.length) return null
 
+
+function OldPartialCall({ part }: { part: ToolInvocationUIPart }) {
   return (
-    <div className="flex flex-col items-start gap-2">
-      {toolInvocations.map((invocation, index) => {
-        switch (invocation.state) {
-          case "partial-call":
-          case "call":
-            return (
-              <div
-                key={index}
-                className="flex items-center gap-2 rounded-lg border bg-muted px-3 py-2 text-sm text-muted-foreground"
-              >
-                <Terminal className="h-4 w-4" />
-                <span>Calling {invocation.toolName}...</span>
-                <Loader2 className="h-3 w-3 animate-spin" />
-              </div>
-            )
-          case "result":
-            return (
-              <div
-                key={index}
-                className="flex flex-col gap-1.5 rounded-lg border bg-muted px-3 py-2 text-sm"
-              >
-                <div className="flex items-center gap-2 text-muted-foreground">
-                  <Code2 className="h-4 w-4" />
-                  <span>Result from {invocation.toolName}</span>
-                </div>
-                <pre className="overflow-x-auto whitespace-pre-wrap text-foreground">
-                  {JSON.stringify(invocation.result, null, 2)}
-                </pre>
-              </div>
-            )
-        }
-      })}
+    <div
+      className="flex items-center gap-2 rounded-lg border bg-muted px-3 py-2 text-sm text-muted-foreground"
+    >
+      <Terminal className="h-4 w-4" />
+      <span>Calling {part.toolInvocation.toolName}...</span>
+      <Loader2 className="h-3 w-3 animate-spin" />
     </div>
   )
 }
