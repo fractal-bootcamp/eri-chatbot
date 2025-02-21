@@ -1,0 +1,65 @@
+[
+  {
+    "role": "user",
+    "content": "hey there can i have a funny tweet",
+    "parts": [
+      {
+        "type": "text",
+        "text": "hey there can i have a funny tweet"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": "Sure! Here's a funny tweet for you:\n\n\"Why do we call it 'rush hour' when nothing moves? 🤔🚗💨 #LifeMysteries\"",
+    "parts": [
+      {
+        "type": "text",
+        "text": "Sure! Here's a funny tweet for you:\n\n\"Why do we call it 'rush hour' when nothing moves? 🤔🚗💨 #LifeMysteries\""
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "give me one of your old tweets",
+    "parts": [
+      {
+        "type": "text",
+        "text": "give me one of your old tweets"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": "Sure! Here's one of my old tweets:\n\n\"Ever notice how 'studying' is a mix of 'student' and 'dying'? Coincidence? I think not. 📚😅 #StudentLife\" \n\nYou can find more of my tweets in the [community archive](https://fabxmporizzqflnftavs.supabase.co/storage/v1/object/public/archives/vividvoid_/archive.json).",
+    "parts": [
+      {
+        "type": "text",
+        "text": "Sure! Here's one of my old tweets:\n\n\"Ever notice how 'studying' is a mix of 'student' and 'dying'? Coincidence? I think not. 📚😅 #StudentLife\" \n\nYou can find more of my tweets in the [community archive](https://fabxmporizzqflnftavs.supabase.co/storage/v1/object/public/archives/vividvoid_/archive.json)."
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "whats your favoritew tweet yuve made?",
+    "parts": [
+      {
+        "type": "text",
+        "text": "whats your favoritew tweet yuve made?"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "id": "msg-L4qwgOllo9QCmoiLaGsix9W9",
+    "createdAt": "2025-02-20T23:03:22.668Z",
+    "content": "One of my favorite tweets is:\n\n\"Sometimes I wonder if clouds look down on us and say, 'Hey, that one looks like an idiot.' ☁️🤔 #DeepThoughts\"\n\nYou can explore more of my tweets in the [community archive](https://fabxmporizzqflnftavs.supabase.co/storage/v1/object/public/archives/vividvoid_/archive.json).",
+    "toolInvocations": [],
+    "parts": [
+      {
+        "type": "text",
+        "text": "One of my favorite tweets is:\n\n\"Sometimes I wonder if clouds look down on us and say, 'Hey, that one looks like an idiot.' ☁️🤔 #DeepThoughts\"\n\nYou can explore more of my tweets in the [community archive](https://fabxmporizzqflnftavs.supabase.co/storage/v1/object/public/archives/vividvoid_/archive.json)."
+      }
+    ]
+  }
+]

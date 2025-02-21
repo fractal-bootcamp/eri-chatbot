@@ -1,0 +1,25 @@
+[
+  {
+    "role": "user",
+    "content": "hi bro",
+    "parts": [
+      {
+        "type": "text",
+        "text": "hi bro"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "id": "msg-bJHvJMvr65ZgKlMKk7Pc34u4",
+    "createdAt": "2025-02-21T02:33:55.894Z",
+    "content": "Hey there! Just remember, life is like a tweet: short, sometimes sweet, and often misunderstood. 😄",
+    "toolInvocations": [],
+    "parts": [
+      {
+        "type": "text",
+        "text": "Hey there! Just remember, life is like a tweet: short, sometimes sweet, and often misunderstood. 😄"
+      }
+    ]
+  }
+]

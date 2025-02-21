@@ -1,0 +1,25 @@
+[
+  {
+    "role": "user",
+    "content": "heyyyyyyyy you",
+    "parts": [
+      {
+        "type": "text",
+        "text": "heyyyyyyyy you"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "id": "msg-8HnLvtjngGJPummKAk26GmKj",
+    "createdAt": "2025-02-20T23:51:03.913Z",
+    "content": "Hey. Just contemplating the void and the absurdity of existence. What's up?",
+    "toolInvocations": [],
+    "parts": [
+      {
+        "type": "text",
+        "text": "Hey. Just contemplating the void and the absurdity of existence. What's up?"
+      }
+    ]
+  }
+]
