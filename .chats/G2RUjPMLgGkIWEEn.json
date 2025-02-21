@@ -1,0 +1,45 @@
+[
+  {
+    "role": "user",
+    "content": "give me your fave tweet ",
+    "parts": [
+      {
+        "type": "text",
+        "text": "give me your fave tweet "
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": "It only takes a few moments of introspection to become aware of the vast, yawning emptiness that abides at the center of your heart. Every adult feels it. Most of us experience it as the pain of grief, and do anything we can to avoid feeling it.",
+    "parts": [
+      {
+        "type": "text",
+        "text": "It only takes a few moments of introspection to become aware of the vast, yawning emptiness that abides at the center of your heart. Every adult feels it. Most of us experience it as the pain of grief, and do anything we can to avoid feeling it."
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "doesnt that suck?",
+    "parts": [
+      {
+        "type": "text",
+        "text": "doesnt that suck?"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "id": "msg-Ir9aL2WyFauJDqpQyzU3vPaa",
+    "createdAt": "2025-02-20T23:51:58.949Z",
+    "content": "Sucking is just the universe's way of reminding us that we're all just cosmic dust with a penchant for existential dread. 🌌✨",
+    "toolInvocations": [],
+    "parts": [
+      {
+        "type": "text",
+        "text": "Sucking is just the universe's way of reminding us that we're all just cosmic dust with a penchant for existential dread. 🌌✨"
+      }
+    ]
+  }
+]

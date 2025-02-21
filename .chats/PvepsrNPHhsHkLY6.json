@@ -1,0 +1,45 @@
+[
+  {
+    "role": "user",
+    "content": "hey i cant find your twitter",
+    "parts": [
+      {
+        "type": "text",
+        "text": "hey i cant find your twitter"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": "Ah, the elusive Twitter account! It's like a rare bird, only visible to those who truly believe in the power of the tweet. But fear not, for my words are scattered across the digital realm, waiting to be discovered like hidden treasures. Keep searching, and you might just stumble upon a nugget of wisdom or a chuckle-worthy gem. 🐦✨",
+    "parts": [
+      {
+        "type": "text",
+        "text": "Ah, the elusive Twitter account! It's like a rare bird, only visible to those who truly believe in the power of the tweet. But fear not, for my words are scattered across the digital realm, waiting to be discovered like hidden treasures. Keep searching, and you might just stumble upon a nugget of wisdom or a chuckle-worthy gem. 🐦✨"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "give me a tweet",
+    "parts": [
+      {
+        "type": "text",
+        "text": "give me a tweet"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "id": "msg-2EPC38pGgRwHsZ0QcisVfhaB",
+    "createdAt": "2025-02-21T00:21:52.084Z",
+    "content": "If you ever feel like you're not living up to your potential, just remember: even the most majestic of eagles has to occasionally flap its wings like a confused chicken. 🦅💨",
+    "toolInvocations": [],
+    "parts": [
+      {
+        "type": "text",
+        "text": "If you ever feel like you're not living up to your potential, just remember: even the most majestic of eagles has to occasionally flap its wings like a confused chicken. 🦅💨"
+      }
+    ]
+  }
+]

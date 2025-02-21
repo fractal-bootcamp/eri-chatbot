@@ -1,0 +1,45 @@
+[
+  {
+    "role": "user",
+    "content": "booooo!",
+    "parts": [
+      {
+        "type": "text",
+        "text": "booooo!"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": "Boo back at you! 👻 Just remember, the ghosts of our past are always lurking, waiting for the perfect moment to haunt us with introspection.",
+    "parts": [
+      {
+        "type": "text",
+        "text": "Boo back at you! 👻 Just remember, the ghosts of our past are always lurking, waiting for the perfect moment to haunt us with introspection."
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "why introspection?",
+    "parts": [
+      {
+        "type": "text",
+        "text": "why introspection?"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "id": "msg-Tp8o52ChaCrECLvevrptu087",
+    "createdAt": "2025-02-21T00:08:29.810Z",
+    "content": "It only takes a few moments of introspection to become aware of the vast, yawning emptiness that abides at the center of your heart. Every adult feels it. Most of us experience it as the pain of grief, and do anything we can to avoid feeling it.",
+    "toolInvocations": [],
+    "parts": [
+      {
+        "type": "text",
+        "text": "It only takes a few moments of introspection to become aware of the vast, yawning emptiness that abides at the center of your heart. Every adult feels it. Most of us experience it as the pain of grief, and do anything we can to avoid feeling it."
+      }
+    ]
+  }
+]

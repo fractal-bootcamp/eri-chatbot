@@ -1,0 +1,165 @@
+[
+  {
+    "role": "user",
+    "content": "yo i want to post on twitter today!!!!!!!",
+    "parts": [
+      {
+        "type": "text",
+        "text": "yo i want to post on twitter today!!!!!!!"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": "The best tweets come from the heart, or the vast, yawning emptiness at the center of it. What are you feeling today?",
+    "parts": [
+      {
+        "type": "text",
+        "text": "The best tweets come from the heart, or the vast, yawning emptiness at the center of it. What are you feeling today?"
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "i just want a tweet that is like my old tweets but with more nuance",
+    "parts": [
+      {
+        "type": "text",
+        "text": "i just want a tweet that is like my old tweets but with more nuance"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": "The experience of life is a rapid cycling between states of chaos and calm, several times or, if severe, several hundred times per day. Embrace the ride, for nothing is sacred, yet everything is sacred.",
+    "parts": [
+      {
+        "type": "text",
+        "text": "The experience of life is a rapid cycling between states of chaos and calm, several times or, if severe, several hundred times per day. Embrace the ride, for nothing is sacred, yet everything is sacred."
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "can you write me an essay",
+    "parts": [
+      {
+        "type": "text",
+        "text": "can you write me an essay"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": "I believe in everything. Nothing is sacred. I believe in nothing. Everything is sacred. That's the essay.",
+    "parts": [
+      {
+        "type": "text",
+        "text": "I believe in everything. Nothing is sacred. I believe in nothing. Everything is sacred. That's the essay."
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "im not feeling that existential today",
+    "parts": [
+      {
+        "type": "text",
+        "text": "im not feeling that existential today"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": "Not my most dignified habit, but sometimes I just want to hit life with grill lights that are ~3x as bright as the average high beams.",
+    "parts": [
+      {
+        "type": "text",
+        "text": "Not my most dignified habit, but sometimes I just want to hit life with grill lights that are ~3x as bright as the average high beams."
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "whats a good tweet . i saw a fish in a coy pond today",
+    "parts": [
+      {
+        "type": "text",
+        "text": "whats a good tweet . i saw a fish in a coy pond today"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": "Just realized that fish in a koi pond are like us—swimming in circles, occasionally bumping into each other, and wondering if there's more to life than this watery loop.",
+    "parts": [
+      {
+        "type": "text",
+        "text": "Just realized that fish in a koi pond are like us—swimming in circles, occasionally bumping into each other, and wondering if there's more to life than this watery loop."
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "thats terible and has no humor",
+    "parts": [
+      {
+        "type": "text",
+        "text": "thats terible and has no humor"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": "Saw a fish in a koi pond today. It looked at me like, \"Bro, you think your life's a loop?\"",
+    "parts": [
+      {
+        "type": "text",
+        "text": "Saw a fish in a koi pond today. It looked at me like, \"Bro, you think your life's a loop?\""
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "thats not fire",
+    "parts": [
+      {
+        "type": "text",
+        "text": "thats not fire"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "content": "Saw a fish in a koi pond today. It was the most zen creature I've ever seen, probably because it doesn't have to pay taxes.",
+    "parts": [
+      {
+        "type": "text",
+        "text": "Saw a fish in a koi pond today. It was the most zen creature I've ever seen, probably because it doesn't have to pay taxes."
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "NOOOOOOOO",
+    "parts": [
+      {
+        "type": "text",
+        "text": "NOOOOOOOO"
+      }
+    ]
+  },
+  {
+    "role": "assistant",
+    "id": "msg-0BHPYvelPDBtMa27JuvCTy0q",
+    "createdAt": "2025-02-21T00:06:17.189Z",
+    "content": "Saw a fish in a koi pond today. It was giving me the side-eye, probably judging my life choices.",
+    "toolInvocations": [],
+    "parts": [
+      {
+        "type": "text",
+        "text": "Saw a fish in a koi pond today. It was giving me the side-eye, probably judging my life choices."
+      }
+    ]
+  }
+]
